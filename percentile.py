@@ -10,19 +10,21 @@ import os.path
 
 class Percentile:
     def __init__(self):
-        self.type = "last"
-        self.bias = "user"
+        self.transformtype = "user" # possible values: user, item
         self.input = "input\\rating.txt"
         self.output = "output\\percentile.txt"
         self.dictionary = {}
 
 
-    # creating a dictionary based on first column of data e.g., in rating data it would be like <userid, [rate1, rate2, rate3, ...]>
-    def create_firstdictionary(self):
+    # creating user/item profile, it would be like <userid/itemid, [rate1, rate2, rate3, ...]>
+    def create_profile(self):
         with open(self.input) as f:
             for line in f:
                 data = line.split("\t")
-                per.dictionary.setdefault(data[0].rstrip(), []).append(data[2].rstrip())
+                if self.transformtype is "user":
+                    per.dictionary.setdefault(data[0].rstrip(), []).append(data[2].rstrip())
+                elif self.transformtype is "item":
+                    per.dictionary.setdefault(data[1].rstrip(), []).append(data[2].rstrip())
 
     # percentile computation
     def compute_percentile(self):
