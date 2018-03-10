@@ -7,4 +7,5 @@ Basic usage
 Input
 
 The supported format is ratings provided by users on items:
+
 userid     itemid     rating
