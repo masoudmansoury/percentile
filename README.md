@@ -20,6 +20,23 @@ The output file has the same format as the input file except the last column whi
 
 ### Results
 
+Experiments are performed on multiple algorithms and datasets. For sensitivity analysis, we also performed a grid-search over below hyperparamters:
+
+| hyperparamter            | value                              |
+| -------------------------|:----------------------------------:|
+| transformation type      | {user, item}                       |
+| overall bias             | {0.0001, 0.001, 0.005, 0.01}       |
+| user bias                | {0.0001, 0.001, 0.005, 0.01}       |
+| item bias                | {0.0001, 0.001, 0.005, 0.01}       |
+| implicit feedback bias   | {0.0001, 0.001, 0.005, 0.01}       |
+| learning rate            | {0.0001, 0.001, 0.005, 0.01}       |
+| number of iterations     | {30, 50, 100}                      |
+| number of factors        | {50, 100, 150}                     |
+| number of neighbors      | {10, 20, 30, 40, 50, 70, 100, 200} |
+| shrinkage                | {0, 10, 20}                        |
+| similarity function      | {pearson, cosine}                  |
+| percentile smoothed param| {5, 10, 20}                  |
+
 The results for all algorithms that we experimented are as follow:
 
 #### Bookcrossing dataset
