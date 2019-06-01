@@ -24,7 +24,6 @@ Experiments are performed on multiple algorithms and datasets. For sensitivity a
 
 | hyperparamter            | value                              |
 | -------------------------|:----------------------------------:|
-| transformation type      | {user, item}                       |
 | overall bias             | {0.0001, 0.001, 0.005, 0.01}       |
 | user bias                | {0.0001, 0.001, 0.005, 0.01}       |
 | item bias                | {0.0001, 0.001, 0.005, 0.01}       |
@@ -43,7 +42,7 @@ The results for all algorithms that we experimented are as follow:
 
 | algorithm     | rating   | z-score  | percentile first | percentile median | percentile last | smoothed first | smoothed median | smoothed last |
 | ------------- |:--------:| --------:|:----------------:|:-----------------:|:---------------:|:--------------:|:---------------:|:-------------:|
-| ItemAVG       | 0.00047  | 0.00042  | **0.00054**      | **0.00057**       | **0.00071**     |
+| ItemAVG       | 0.00047  | 0.00042  | **0.00054**      | **0.00057**       | **0.00071**     | 0.00044        | **0.00078**     | 0.00030      |
 | BiasedMF      | 0.009    | 0.008    | **0.014**        | **0.014**         | **0.012**       | 0.014          | 0.014           | 0.013         |
 | SVD++         | 0.009    | 0.006    | **0.011**        | **0.011**         | **0.010**       | 0.014          | 0.013           | 0.012         |
 | UserKNN       | 0.015    | 0.016    | 0.016            | 0.016             | 0.016           | 0.016          | 0.016           | 0.016         |
@@ -54,7 +53,7 @@ The results for all algorithms that we experimented are as follow:
 
 | algorithm     | rating   | z-score  | percentile first | percentile median | percentile last | smoothed first | smoothed median | smoothed last |
 | ------------- |:--------:| --------:|:----------------:|:-----------------:|:---------------:|:--------------:|:---------------:|:-------------:|
-| ItemAVG       | 0.00019  | 0.01228  | 0.00020          | 0.00020           | 0.00285         | 
+| ItemAVG       | 0.00019  | 0.01228  | 0.00020          | 0.00020           | 0.00285         | 0.00012        | 0.00011         | 0.00201
 | BiasedMF      | 0.019    | 0.005    | **0.027**        | **0.024**         | 0.016           | **0.027**      | **0.027**       | **0.026**     |
 | SVD++         | 0.009    | 0.011    | **0.022**        | **0.019**         | **0.017**       | **0.019**      | **0.018**       | **0.016**     |
 | UserKNN       | 0.0097   | 0.0099   | 0.0097           | 0.0098            | 0.0097          | **0.010**      | **0.010**       | **0.010**     |
@@ -76,7 +75,7 @@ The results for all algorithms that we experimented are as follow:
 
 | algorithm     | rating   | z-score  | percentile first | percentile median | percentile last | smoothed first | smoothed median | smoothed last |
 | ------------- |:--------:| --------:|:----------------:|:-----------------:|:---------------:|:--------------:|:---------------:|:-------------:|
-| ItemAVG       |   |   |           |            |          |     |          |        |
+| ItemAVG       | 0.00008  | 0.09003  | 0.00015          | 0.00011           | 0.00262         |   |           |            |          |     |          |        |
 | BiasedMF      | 0.116    | 0.116    | **0.151**        | **0.156**         | **0.156**       | **0.157**      | **0.158**       | **0.156**     |
 | SVD++         | 0.145    | 0.145    | **0.153**        | **0.157**         | **0.153**       | **0.162**      | **0.166**       | **0.157**     |
 | UserKNN       | 0.219    | 0.219    | 0.219            | 0.219             | 0.217           |           |            |          |
